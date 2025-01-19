@@ -8,7 +8,7 @@ import { Skills } from "./components/skill";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="mx-8">
       <Header />
       <Hero />
       <About />
