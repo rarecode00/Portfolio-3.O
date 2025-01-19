@@ -1,44 +1,48 @@
-"use client";
-import Image from "next/image";
+import React from "react";
 import { ReactTyped } from "react-typed";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative">
         {/* Outermost circle */}
-        <div className="w-[600px] h-[600px] rounded-full border border-gray-300 flex items-center justify-center animate-[ripple_3s_ease-in-out_infinite] opacity-70">
+        <div className="w-96 h-96 md:w-[600px] md:h-[600px] rounded-full border border-gray-400/30 flex items-center justify-center">
           {/* Second circle */}
-          <div className="w-[500px] h-[500px] rounded-full border border-gray-400 flex items-center justify-center animate-[ripple_3s_ease-in-out_infinite_0.75s] opacity-70">
+          <div className="w-80 h-80 md:w-[500px] md:h-[500px] rounded-full border border-gray-400/40 flex items-center justify-center">
             {/* Third circle */}
-            <div className="w-[400px] h-[400px] rounded-full border border-gray-500 flex items-center justify-center animate-[ripple_3s_ease-in-out_infinite_1.5s] opacity-70">
+            <div className="w-64 h-64 md:w-[400px] md:h-[400px] rounded-full border border-gray-400/50 flex items-center justify-center">
               {/* Fourth circle (innermost) */}
-              <div className="w-[300px] h-[300px] rounded-full border border-gray-600 flex items-center justify-center animate-[ripple_3s_ease-in-out_infinite_2.25s] opacity-70">
+              <div className="w-48 h-48 md:w-[300px] md:h-[300px] rounded-full border border-gray-400/60 flex items-center justify-center">
                 {/* Content container */}
-                <div className="flex flex-col items-center justify-center">
-                  <div className="w-36 h-36 rounded-full overflow-hidden bg-gray-200">
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-r from-blue-500 to-purple-500">
                     <Image
                       alt="my profile"
-                      src="/api/placeholder/96/96"
-                      width={96}
-                      height={96}
-                    //   className="w-full h-full object-cover"
+                      src="/my_profile.png"
+                      width={144}
+                      height={144}
+                      className="rounded-full w-full h-full object-cover"
                     />
                   </div>
-                  <p className="text-center font-medium text-2xl tracking-widest">
+                </div>
+                <div className="relative top-[90px]">
+                  <h1 className="font-sans text-white text-xl mt-4">
                     Software Developer
-                  </p>
-                  <ReactTyped
-                    strings={[
-                      "Passionate about coding.",
-                      "MERN Stack Developer.",
-                      "Problem Solver.",
-                    ]}
-                    typeSpeed={50}
-                    backSpeed={30}
-                    loop
-                    className="text-2xl text-gray-300 mt-4"
-                  />
+                  </h1>
+                  <div className="absolute top-[60px] left-[-100px]">
+                    <ReactTyped
+                      strings={[
+                        "Crafting clean and efficient code",
+                        "Breaking bugs, not hearts.",
+                        "Your next innovation partner."
+                      ]}
+                      typeSpeed={50}
+                      backSpeed={30}                      
+                      loop
+                      className="font-sans text-white text-3xl whitespace-nowrap"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
