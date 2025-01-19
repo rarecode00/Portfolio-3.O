@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0">
+    <header className="fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between p-6 pt-8 items-center">
         {/* Social Icons */}
         <div className="flex items-center gap-4">
@@ -39,11 +39,11 @@ export function Header() {
             />
           </a>
         </div>
-        <div className="flex gap-8">
-          <a>About</a>
-          <a>Experience</a>
-          <a>Skills</a>
-          <a>Projects</a>
+        <div className="flex gap-5 z-50">
+          <a className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3]" href="/#about">About</a>
+          <a className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3]" href="/#experience">Experience</a>
+          <a className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3]" href="#skills">Skills</a>
+          <a className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3]" href="#projects">Projects</a>
         </div>
         <div>Get in touch</div>
       </div>

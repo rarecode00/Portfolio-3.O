@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 export function About() {
+    
     return (
-        <div className="flex flex-col md:flex-row gap-12 font-sans mt-20">
+        <div className="flex flex-col md:flex-row gap-12 font-sans mt-20" id="about">
             {/* Image container */}
             <img
-                src="/my_profile.png"
+                src="/new_profile.png"
                 className="w-36 h-36 sm:w-52 sm:h-52 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-90 md:h-140 lg:w-[350px] lg:h-[390px] mx-auto md:mx-0"
             />
             {/* Right container about me */}
