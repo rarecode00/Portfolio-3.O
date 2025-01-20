@@ -112,37 +112,38 @@ export const skills = [
 ];
 
 export function Skills() {
-  return (
-    <div className="mt-24" id="skills">
-      <div className="flex justify-center">
-        <SectionHeading heading={"Skills"} />
-      </div>
-      <div className="flex justify-center">
-        <div className="grid grid-cols-8 gap-6 mt-8">
-          {skills.map((skill, index) => (
-            <Skill key={index} name={skill.name} imgSrc={skill.imgSrc} />
-          ))}
+    return (
+      <div className="mt-24 px-4" id="skills">
+        <div className="flex justify-center">
+          <SectionHeading heading={"Skills"} />
+        </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6 mt-8">
+            {skills.map((skill, index) => (
+              <Skill key={index} name={skill.name} imgSrc={skill.imgSrc} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
-
-export function Skill({ name, imgSrc }) {
-  return (
-    <div className="group relative flex cursor-pointer">
-      <img
-        className="border-2 border-gray-500 object-contain p-2 sm:p-2 md:p-3 lg:p-4 w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
-        src={imgSrc}
-        alt={name}
-      />
-      <div className="absolute opacity-0 p-0 sm:p-1 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 z-0">
-        <div className="flex items-center justify-center h-full">
-          <p className="md:text-md font-bold text-gray-900 opacity-100 text-center break-all">
-            {name}
-          </p>
+    );
+  }
+  
+  export function Skill({ name, imgSrc }) {
+    return (
+      <div className="group relative flex cursor-pointer">
+        <img
+          className="border-2 border-gray-500 object-contain p-2 sm:p-3 lg:p-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
+          src={imgSrc}
+          alt={name}
+        />
+        <div className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 z-0">
+          <div className="flex items-center justify-center h-full">
+            <p className="text-xs sm:text-sm md:text-md font-bold text-gray-900 opacity-100 text-center break-all px-1">
+              {name}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
+  
