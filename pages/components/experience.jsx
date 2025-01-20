@@ -17,7 +17,7 @@ export function Experience() {
         "Collaborated with cross-functional teams to seamlessly integrate front-end and back-end components.",
         "Leveraged agile methodologies to deliver high-quality software solutions within project timelines.",
       ],
-      techStack: [],
+      techStack: ['JavaScript', 'Angular', 'React.js', 'Node.js', 'Express.js', 'MongoDB', 'Redis', 'Open Ai', 'Tailwind', 'Mantine Ui', 'Tanstack', 'Bitbucket', 'Figma', 'Slack'],
     },
     {
       jobTitle: "Frontend Developer Intern",
@@ -32,7 +32,7 @@ export function Experience() {
         "Integrated multi-language support into application for better user experience.",
         "Collaborated with team members in an agile development environment to achieve project goals.",
       ],
-      techStack: [],
+      techStack: ['JavaScript', 'React.js', 'Next.js', 'VS Code'],
     },
     {
       jobTitle: "Teaching Assistant",
@@ -45,7 +45,7 @@ export function Experience() {
         "Assisted students with resolving their Data Structures and Algorithms (DSA) related doubts and concerns.",
         "Debugged and troubleshot Data Structures and Algorithms (DSA) code to identify and resolve issues.",
       ],
-      techStack: [],
+      techStack: ['C++'],
     },
   ];
 
