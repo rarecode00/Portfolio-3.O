@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function About() {
+export default function About() {
     
     return (
         <div className="flex flex-col md:flex-row gap-12 font-sans mt-20" id="about">

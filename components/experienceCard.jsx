@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { skills } from "./skill";
-export function ExperienceCard({
+export default function ExperienceCard({
 
   companyIcon,
   jobTitle,

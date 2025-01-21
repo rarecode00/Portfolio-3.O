@@ -111,7 +111,7 @@ export const skills = [
   },  
 ];
 
-export function Skills() {
+export default  function Skills() {
     return (
       <div className="mt-24 px-4" id="skills">
         <div className="flex justify-center">

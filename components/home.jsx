@@ -2,7 +2,7 @@ import React from "react";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 
-export function Hero() {
+export default  function Hero() {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="relative">

@@ -1,11 +1,11 @@
 import { useEffect, useLayoutEffect } from "react";
-import { About } from "./components/about";
-import { Contact } from "./components/contact";
-import { Experience } from "./components/experience";
-import { Header } from "./components/header";
-import { Hero } from "./components/home";
-import { Projects } from "./components/project";
-import { Skills } from "./components/skill";
+import Header from "../components/header";
+import Hero from "../components/home";
+import About from "../components/about";
+import Experience from "../components/experience";
+import Skills from "../components/skill";
+import Projects from "../components/project";
+import Contact from "../components/contact";
 
 export default function Home() {
 

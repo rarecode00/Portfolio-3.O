@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Header() {
+export default  function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between p-6 pt-8 items-center">

@@ -1,7 +1,7 @@
 import { SectionHeading } from "./about";
-import { ExperienceCard } from "./experienceCard";
+import ExperienceCard from "./experienceCard";
 
-export function Experience() {
+export default function Experience() {
   const experienceData = [
     {
       jobTitle: "Full Stack Developer",
@@ -55,7 +55,7 @@ export function Experience() {
         <SectionHeading heading={"Experience"} />
       </div>
       <div className="flex items-center gap-8 overflow-x-auto custom-scrollbar mt-14">
-        {experienceData.map((experience, index) => (
+        {experienceData && Array.isArray(experienceData) && experienceData?.map((experience, index) => (
           <ExperienceCard key={index} {...experience} />
         ))}
       </div>
