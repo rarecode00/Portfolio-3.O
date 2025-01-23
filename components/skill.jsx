@@ -1,4 +1,6 @@
 import { SectionHeading } from "./about";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 export const skills = [
   {
@@ -111,39 +113,84 @@ export const skills = [
   },  
 ];
 
-export default  function Skills() {
+
+export default function Skills() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.1
+            }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                type: "spring",
+                stiffness: 300,
+                damping: 10
+            }
+        }
+    };
+
     return (
-      <div className="mt-24 px-4" id="skills">
-        <div className="flex justify-center">
-          <SectionHeading heading={"Skills"} />
+        <div className="mt-24 px-4" id="skills">
+            <div className="flex justify-center">
+                <SectionHeading heading={"Skills"} />
+            </div>
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="flex justify-center"
+            >
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6 mt-8">
+                    {skills.map((skill, index) => (
+                        <Skill 
+                            key={index} 
+                            name={skill.name} 
+                            imgSrc={skill.imgSrc} 
+                            variants={itemVariants}
+                        />
+                    ))}
+                </div>
+            </motion.div>
         </div>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6 mt-8">
-            {skills.map((skill, index) => (
-              <Skill key={index} name={skill.name} imgSrc={skill.imgSrc} />
-            ))}
-          </div>
-        </div>
-      </div>
     );
-  }
-  
-  export function Skill({ name, imgSrc }) {
+}
+
+export function Skill({ name, imgSrc, variants }) {
     return (
-      <div className="group relative flex cursor-pointer">
-        <img
-          className="border-2 border-gray-500 object-contain p-2 sm:p-3 lg:p-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
-          src={imgSrc}
-          alt={name}
-        />
-        <div className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 z-0">
-          <div className="flex items-center justify-center h-full">
-            <p className="text-xs sm:text-sm md:text-md font-bold text-gray-900 opacity-100 text-center break-all px-1">
-              {name}
-            </p>
-          </div>
-        </div>
-      </div>
+        <motion.div 
+            variants={variants}
+            className="group relative flex cursor-pointer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+        >
+            <img
+                className="border-2 border-gray-500 object-contain p-2 sm:p-3 lg:p-4 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 filter group-hover:grayscale transition duration-300 ease-in-out"
+                src={imgSrc}
+                alt={name}
+            />
+            <motion.div 
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 0.9 }}
+                className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 z-0"
+            >
+                <div className="flex items-center justify-center h-full">
+                    <p className="text-xs sm:text-sm md:text-md font-bold text-gray-900 opacity-100 text-center break-all px-1">
+                        {name}
+                    </p>
+                </div>
+            </motion.div>
+        </motion.div>
     );
-  }
+}
+
   
