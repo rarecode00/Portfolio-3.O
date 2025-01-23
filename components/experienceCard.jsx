@@ -14,7 +14,7 @@ export default function ExperienceCard({
   // find the tech stack from skills by name and push the object and return the array
   const techStackList = useMemo(() => {
     return techStack.map((skill) => {
-      const foundSkill = skills.find((s) => s.name === skill);
+      const foundSkill = skills?.find((s) => s.name === skill);
       return foundSkill;
     });
   }, [techStack]);
