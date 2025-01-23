@@ -35,7 +35,7 @@ export default function Home() {
   }, []);  // Runs once on mount
   
   return (
-    <div className="mx-8 font-sans">
+    <div className="mx-8 font-sans mb-20">
       <Header />
       <Hero />
       <About />
