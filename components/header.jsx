@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="flex justify-between p-6 pt-8 items-center">
-        {/* Social Icons */}
+        {/* Social Icons - Visible on all screen sizes */}
         <div className="flex items-center gap-4">
           <a
             href="https://leetcode.com/u/rarecode_00/"
@@ -13,9 +13,9 @@ export default function Header() {
           >
             <Image
               src={"/leetcode.png"}
-              width={"20"}
-              height={"20"}
-              alt="Logo 1"
+              width={20}
+              height={20}
+              alt="LeetCode"
             />
           </a>
           <a
@@ -25,9 +25,9 @@ export default function Header() {
           >
             <Image
               src={"/instagram.png"}
-              width={"20"}
-              height={"20"}
-              alt="Logo 1"
+              width={20}
+              height={20}
+              alt="Instagram"
             />
           </a>
           <a
@@ -37,9 +37,9 @@ export default function Header() {
           >
             <Image
               src={"/github.png"}
-              width={"20"}
-              height={"20"}
-              alt="Logo 1"
+              width={20}
+              height={20}
+              alt="GitHub"
             />
           </a>
           <a
@@ -49,13 +49,15 @@ export default function Header() {
           >
             <Image
               src={"/linkedin.png"}
-              width={"20"}
-              height={"20"}
-              alt="Logo 1"
+              width={20}
+              height={20}
+              alt="LinkedIn"
             />
           </a>
         </div>
-        <div className="flex gap-5 z-50 uppercase">
+
+        {/* Navigation Links - Hidden on smaller screens */}
+        <div className="flex gap-5 z-50 uppercase max-md:hidden text-[13px]">
           <a
             className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3]"
             href="/#about"
@@ -80,13 +82,13 @@ export default function Header() {
           >
             Projects
           </a>
-        </div>
-        <a
+          <a
             className="border border-solid border-transparent p-1 px-3 rounded-[9999px] hover:border-[#44c3c3] uppercase"
             href="#contact"
           >
             Get In Touch
           </a>
+        </div>
       </div>
     </header>
   );

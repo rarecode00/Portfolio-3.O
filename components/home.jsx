@@ -43,8 +43,9 @@ export default  function Hero() {
                       className="font-sans text-white text-3xl whitespace-nowrap"
                     />
                   </div>
+                  
                 </div>
-              </div>
+              </div>              
             </div>
           </div>
         </div>
