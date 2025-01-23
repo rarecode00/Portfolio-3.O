@@ -2,7 +2,7 @@ import { SectionHeading } from "./about";
 
 export default function Contact() {
   return (
-    <div className="mt-16 mx-40 mb-40" id="contact">
+    <div className="mt-16 mx-40" id="contact">
       {/* Section Heading */}
       <div className="flex justify-center">
         <SectionHeading heading={"Contact"} />

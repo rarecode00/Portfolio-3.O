@@ -10,7 +10,7 @@ export default function About() {
                 className="w-36 h-36 sm:w-52 sm:h-52 md:mb-0 flex-shrink-0 rounded-full object-cover md:rounded-lg md:w-90 md:h-140 lg:w-[350px] lg:h-[390px] mx-auto md:mx-0"
             />
             {/* Right container about me */}
-            <div className="flex flex-col items-center md:items-start gap-8 text-center md:text-left flex-grow">
+            <div className="flex flex-col items-center md:items-start gap-6 text-center md:text-left flex-grow">
                 <SectionHeading heading={'About'} />
                 <p className="text-4xl">Here is a little bit about me</p>
                 <p className="text-lg">
