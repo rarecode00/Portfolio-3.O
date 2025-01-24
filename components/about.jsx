@@ -8,7 +8,7 @@ export default function About() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row font-sans gap-6 md:gap-14 lg:gap-14 mt-20 max-w-7xl px-4 items-center" id="about">
+        <div className="flex flex-col md:items-start lg:items-start md:flex-row font-sans gap-6 md:gap-14 lg:gap-14 mt-20 max-w-7xl px-4 items-center" id="about">
             {/* Image container with improved sizing */}
             <motion.div 
                 className="flex flex-col relative text-center md:text-left md:flex-row max-w-7xl justify-evenly items-center gap-4"
