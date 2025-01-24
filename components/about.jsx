@@ -19,7 +19,7 @@ export default function About() {
                     src="/new_profile.png"
                     alt="Krishna Sharma"
                     className="w-full h-auto rounded-lg object-cover"
-                    style={{ maxHeight: '500px' }}
+                    style={{ maxHeight: '440px' }}
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                 />               
