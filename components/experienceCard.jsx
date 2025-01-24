@@ -41,7 +41,7 @@ export default function ExperienceCard({
 
       {/* Tech Stack */}
       {techStack && techStack.length > 0 && (
-        <div className="pl-8 pb-4 pt-2 flex gap-3 items-center flex-wrap mb-4">
+        <div className="pl-8 pb-4 pt-2 mb-4 flex space-x-2 my-2 flex-wrap">
           {techStackList?.map((tech, index) => (
             <DisplayTechSkills
               key={index}
@@ -70,9 +70,7 @@ export default function ExperienceCard({
 }
 
 function DisplayTechSkills({ imgUrl, hoverText }) {
-  return (
-    <div className="" title={hoverText}>
-      <img src={imgUrl} alt={hoverText} className="w-8 h-8 object-contain rounded-md" />
-    </div>
+  return (    
+      <img src={imgUrl} alt={hoverText} className="h-7 w-7 sm:h-10 sm:w-10 p-[2px] object-contain flex flex-wrap" title={hoverText}/>    
   );
 }

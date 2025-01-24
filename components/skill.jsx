@@ -150,7 +150,7 @@ export default function Skills() {
                 variants={containerVariants}
                 className="flex justify-center"
             >
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6 mt-8">
+                <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-8 gap-4 sm:gap-6 mt-8">
                     {skills.map((skill, index) => (
                         <Skill 
                             key={index} 
@@ -184,7 +184,7 @@ export function Skill({ name, imgSrc, variants }) {
                 className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-white w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 z-0"
             >
                 <div className="flex items-center justify-center h-full">
-                    <p className="text-xs sm:text-sm md:text-md font-bold text-gray-900 opacity-100 text-center break-all px-1">
+                    <p className="text-[10px] sm:text-sm md:text-md font-bold text-gray-900 opacity-100 text-center break-all px-1">
                         {name}
                     </p>
                 </div>

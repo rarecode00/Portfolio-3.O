@@ -8,31 +8,32 @@ export default function About() {
     };
 
     return (
-        <div className="flex flex-col md:flex-row gap-12 font-sans mt-20 max-w-6xl mx-auto px-4 items-center" id="about">
+        <div className="flex flex-col md:flex-row font-sans gap-6 md:gap-14 lg:gap-14 mt-20 max-w-7xl px-4 items-center" id="about">
             {/* Image container with improved sizing */}
             <motion.div 
-                className="w-full md:w-1/2 lg:w-[450px] flex-shrink-0"
+                className="flex flex-col relative text-center md:text-left md:flex-row max-w-7xl justify-evenly items-center gap-4"
                 // onHoverStart={() => setIsHovered(true)}
                 // onHoverEnd={() => setIsHovered(false)}
             >
                 <motion.img
                     src="/new_profile.png"
                     alt="Krishna Sharma"
-                    className="w-full h-auto rounded-lg object-cover"
-                    style={{ maxHeight: '440px' }}
+                    className="md:mb-0 flex-shrink-0 w-40 h-40 sm:w-52 sm:h-52 rounded-full object-cover md:rounded-lg md:w-90 md:h-140 lg:w-[370px] lg:h-[430px]"                    
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                 />               
             </motion.div>
 
             {/* Right container about me */}
-            <div className="flex flex-col items-center md:items-start gap-6 text-center md:text-left w-full md:w-1/2">
+            <div className="flex flex-col items-center md:items-start gap-4 text-center md:text-left w-full md:w-[60%]">
+                <div className='hidden lg:block md:block'>
                 <SectionHeading heading={'About'} />
+                </div>
                 <motion.h2 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-4xl"
+                    className="text-xl md:2xl lg:text-4xl font-semibold text-textl dark:text-textd"
                 >
                     Here is a little bit about me
                 </motion.h2>
@@ -40,7 +41,7 @@ export default function About() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
-                    className="text-lg"
+                    className="text-sm md:text-lg lg:text-lg text-justify text-textl dark:text-textd"
                 >
                     I am Krishna Sharma, a Computer Science graduate with 1.5+ years of professional experience as a web developer specializing in the MERN stack. I build scalable and efficient web applications, leveraging expertise in React.js, Next.js, Node.js, and databases like MongoDB and PostgreSQL. A passionate problem solver, I am a React 3-star coder on CodeChef and a Pupil on Codeforces. I am actively seeking roles as a full-stack, front-end, or back-end developer to contribute to innovative projects. Let's connect and explore the possibilities together!
                 </motion.p>
